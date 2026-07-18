@@ -8,6 +8,16 @@ body {
     font-family: "Smythe", system-ui;
 }
 
+hr {
+    color: #d2d2d2;
+    width: 85%;
+    margin: 0 auto;
+}
+
+h3 {
+    font-weight: 500;
+}
+
 header img {
     display: block;
     margin: 50px auto 0 auto;
@@ -16,10 +26,11 @@ header img {
 }
 
 main {
+    position: relative;
     background-color: white;
     width: 400px;
     margin: 0 auto;
-    height: 600px;
+    height: 650px;
 }
 
 .item-option {
@@ -31,11 +42,16 @@ main {
 }
 
 .item-img {
+    cursor: default;
     font-size: 50px;
 }
 
 .item-desc {
     font-size: 12px;
+}
+
+.item-desc h2 {
+    font-weight: 500;
 }
 
 .item-ingredients {
@@ -55,10 +71,124 @@ main {
     border-radius: 50%;
     margin-left: auto;
     margin-right: 10px;
+    cursor: pointer;
 }
 
-hr {
-    color: #d2d2d2;
-    width: 85%;
-    margin: 0 auto;
+.item-option button:hover {
+    background-color: #ddd;
+}
+
+.item-option button:active {
+    border: 1px solid black;
+}
+
+.order-summary {
+    padding: 15px 20px;
+}
+
+.order-summary h2 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.items-added {
+    margin-top: 40px;
+    margin-bottom: 6px;
+}
+
+.bill-item {
+    display: flex;
+    gap: 6px;
+}
+
+.bill-item button{
+    border: none;
+    background-color: white;
+    color: #BBBBBB;
+    font-size: 8px;
+    cursor: pointer;
+}
+
+.bill-item-price {
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.order-summary-break {
+    border-color: #333;
+    width: 95%;
+}
+
+.order-amount {
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+    margin-bottom: 18px;
+}
+
+.final-price {
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.complete-order-btn {
+    background-color: #16DB99;
+    color: white;
+    font-weight: 700;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    padding: 10px 120px;
+    cursor: pointer;
+}
+
+.payment-modal {
+    background-color: white;
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    margin: auto;
+    inset: 0;
+    box-shadow: 0 0 60px 10px #777;
+}
+
+.payment-modal-display {
+    display: none;
+}
+
+.payment-modal h2 {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    margin: 30px 0;
+}
+
+.payment-modal form input{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    display: block;
+    width: 70%;
+    margin: 20px auto;
+    padding: 10px 20px;
+}
+
+.card-number::-webkit-outer-spin-button,
+.card-number::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.modal-pay-btn {
+    background-color: #16DB99;
+    color: white;
+    font-weight: 700;
+    display: block;
+    width: 83%;
+    margin: 40px auto 0 auto;
+    border: none;
+    padding: 10px 120px;
+    cursor: pointer;
 }

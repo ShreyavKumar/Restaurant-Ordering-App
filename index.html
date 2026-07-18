@@ -24,7 +24,33 @@
                 </section>
                 <hr> -->
             </div>
+            <div class="order-summary" id="order-summary">
+                <!-- <h2>Your Order</h2>
+                <div class="items-added" id="items-added">
+                    <div class="bill-item">
+                        <h3>Pizza</h3>
+                        <button>remove</button>
+                        <p class="bill-item-price">$14</p>
+                    </div>
+                </div>
+                <hr class="order-summary-break">
+                <div class="order-amount">
+                    <h3>Total Price:</h3>
+                    <p class="final-price">$69</p>
+                </div> -->
+                <!-- <button class="complete-order-btn" id="complete-order-btn">Complete Order</button> -->
+            </div>
+            <div class="payment-modal payment-modal-display" id="payment-modal">
+                <form>
+                    <h2>Enter card details</h2>
+                    <input type="text" placeholder="Enter your name" autocomplete="off" required>
+                    <input type="number" placeholder="Enter your card number" autocomplete="off" required>
+                    <input type="password" maxlength="3" pattern="\d{3}" inputmode="numeric" placeholder="Enter CVV" autocomplete="off" required>
+                    <button type="submit" class="modal-pay-btn">Pay</button>
+                </form>
+            </div>
         </main>
+        
         <script src="index.js" type="module"></script>
     </body>
 </html>
