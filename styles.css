@@ -1,3 +1,5 @@
+/* Setting default Layout */
+
 * {
     margin: 0;
     padding: 0;
@@ -32,6 +34,8 @@ main {
     margin: 0 auto;
     height: 650px;
 }
+
+/* Design and Layout for the items in the menu */
 
 .item-option {
     display: flex;
@@ -81,6 +85,8 @@ main {
 .item-option button:active {
     border: 1px solid black;
 }
+
+/* design and pricing of cart */
 
 .order-summary {
     padding: 15px 20px;
@@ -144,6 +150,12 @@ main {
     cursor: pointer;
 }
 
+.complete-order-btn:hover {
+    background-color: #14b67d;
+}
+
+/* User payment info modal design */
+
 .payment-modal {
     background-color: white;
     position: absolute;
@@ -191,4 +203,19 @@ main {
     border: none;
     padding: 10px 120px;
     cursor: pointer;
+}
+
+.modal-pay-btn:hover {
+    background-color: #14b67d;
+}
+
+/* Post payment message */
+
+.post-payment-message {
+    background-color: #ECFDF5;
+    font-size: 20px;
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px 20px;
 }

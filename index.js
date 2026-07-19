@@ -1,7 +1,9 @@
 import {menuArray} from './data.js'
 
 const menuItems = document.getElementById('menu-items')
+const orderSummary = document.getElementById('order-summary')
 const paymentModal = document.getElementById('payment-modal')
+const paymentModalForm = document.getElementById('payment-modal-form')
 
 function renderItems(menuItemsArr) {
     const menuItemsHTML = menuItemsArr.map((item) => {
@@ -65,15 +67,15 @@ function renderOrderSummary(itemIdAddedToCart) {
         <button class="complete-order-btn" id="complete-order-btn">Complete Order</button>
         `
 
-        document.getElementById('order-summary').innerHTML = orderSummaryHtml
+        orderSummary.innerHTML = orderSummaryHtml
     }
     else {
-        document.getElementById('order-summary').innerHTML = ''
+        orderSummary.innerHTML = ''
     }
     
 }
 
-document.getElementById('order-summary').addEventListener('click', (e) => {
+orderSummary.addEventListener('click', (e) => {
     if(e.target.dataset.removeItemId) {
         const filteredItemsSelected = itemsSelected.filter((itemId) => {
             return itemId != Number(e.target.dataset.removeItemId)
@@ -86,32 +88,17 @@ document.getElementById('order-summary').addEventListener('click', (e) => {
     }
 })
 
-//Item Options
+paymentModalForm.addEventListener('submit', (e) => {
+    e.preventDefault()
+    
+    const userPaymentData = new FormData(paymentModalForm)
+    const userName = userPaymentData.get('userName')
+    
+    paymentModal.classList.toggle('payment-modal-display')
+    orderSummary.innerHTML = `
+    <div class="post-payment-message">
+        <p>Thanks, ${userName}! Your order is on it's way!</p>
+    </div>`
+    
+})
 
-
-/*  <section class="item-option">
-        <p class="item-img">🍕</p>
-        <div class="item-desc">
-            <h2>Pizza</h2>
-            <p class="item-ingredients">pepperoni,mushrom,mozarella</p>
-            <p class="item-price">$69</p>
-        </div>
-        <button id="item-id">+</button>
-    </section>
-    <hr>  */
-
-//Order Summary
-
-/*  <h2>Your Order</h2>
-    <div class="items-added" id="items-added">
-        <div class="bill-item">
-            <h3>Pizza</h3>
-            <button>remove</button>
-            <p class="bill-item-price">$14</p>
-        </div>
-    </div>
-    <hr class="order-summary-break">
-    <div class="order-amount">
-        <h3>Total Price:</h3>
-        <p class="final-price">$69</p>
-    </div> */
