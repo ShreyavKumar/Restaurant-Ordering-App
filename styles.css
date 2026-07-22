@@ -32,7 +32,8 @@ main {
     background-color: white;
     width: 400px;
     margin: 0 auto;
-    height: 650px;
+    margin-bottom: 2em;
+    height: 100%;
 }
 
 /* Design and Layout for the items in the menu */

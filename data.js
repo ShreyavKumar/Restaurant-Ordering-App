@@ -13,11 +13,25 @@ export const menuArray = [
         emoji: "🍔",
         id: 1
     },
-        {
+    {
         name: "Beer",
         ingredients: ["grain, hops, yeast, water"],
         price: 12,
         emoji: "🍺",
         id: 2
+    },
+    {
+        name: "Wine",
+        ingredients: ["grapes, jaggery"],
+        price: 30,
+        emoji: "🍷",
+        id: 3
+    },
+    {
+        name: "Fried Chicken",
+        ingredients: ["grapes, jaggery"],
+        price: 10,
+        emoji: "🍗",
+        id: 4
     }
 ]
