@@ -4,7 +4,7 @@ A simple, interactive front-web application that allows users to order food from
 
 ## Features
 
-* **Interactive Menu:** Displays a list of available items, including Pizza, Hamburgers, and Beer.
+* **Interactive Menu:** Displays a list of available items, including Pizza, Hamburgers, and more!
 
 
 * **Shopping Cart:** Users can add items to their order, and the app will automatically calculate the total price.
